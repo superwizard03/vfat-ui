@@ -1,0 +1,28 @@
+<div class="container py-24 text-center">
+  <a class="menuItem btn-default" href="<%= PP %>/">Home</a>
+  <a class="menuItem btn-default active" href="<%= PP %>/all/">All</a>
+  <a class="menuItem btn-default" href="<%= PP %>/bsc/">BSC</a>
+  <a class="menuItem btn-default" href="<%= PP %>/heco/">HECO</a>
+  <a class="menuItem btn-default" href="<%= PP %>/polygon/">POLYGON</a>
+  <a class="menuItem btn-default" href="<%= PP %>/xdai/">xDAI</a>
+  <a class="menuItem btn-default" href="<%= PP %>/avax/">AVAX</a>
+  <a class="menuItem btn-default" href="<%= PP %>/fantom/">FANTOM</a>
+  <a class="menuItem btn-default" href="<%= PP %>/harmony/">HARMONY</a>
+  <a class="menuItem btn-default" href="<%= PP %>/fuse/">FUSE</a>
+  <a class="menuItem btn-default" href="<%= PP %>/thundercore/">ThunderCore</a>
+  <a class="menuItem btn-default" href="<%= PP %>/okex/">OKEX</a>
+  <a class="menuItem btn-default" href="<%= PP %>/kcc/">KUCOIN</a>
+  <a class="menuItem btn-default" href="<%= PP %>/seigniorage/">Seigniorage</a>
+</div>
+<%- include(`${partials}/quick`); -%> <%- include(`${partials}/pool_details_modal`); -%>
+
+<script>
+  let path = window.location.pathname.replace(/[^a-zA-Z ]/g, '')
+
+  if (path === '') {
+    $('.menuItem:first').addClass('active')
+  }
+
+  $('.menuItem + .active').removeClass('active')
+  $(`.menuItem + [href*='${path}']`).addClass('active')
+</script>

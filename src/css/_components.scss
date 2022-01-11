@@ -1,0 +1,34 @@
+.btn-default {
+  transition: all 0.3s ease-in-out;
+  padding: 8px 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  font-size: 14px;
+  color: $text_dark;
+  background-color: $bg_light;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: unset;
+  text-decoration: unset !important;
+
+  a {
+    color: unset !important;
+    text-decoration: unset !important;
+  }
+
+  &:hover {
+    background-color: $text_dark;
+    color: $primary;
+  }
+}
+.active {
+  background-color: $text_dark;
+  color: $primary;
+}
+
+
+.tip {
+  border-bottom: 7px solid #fffcfa;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}

@@ -1,0 +1,25 @@
+<div class="tab-header mb-24">
+  <div id="item1" class="d-inline-block btn-default">
+    <a href="/dashboard">Dashboard</a>
+  </div>
+  &nbsp;
+  <div id="item2" class="d-inline-block btn-default">
+    <a href="/invest">Invest</a>
+  </div>
+  &nbsp;
+  <div id="item3" class="d-inline-block btn-default">
+    <a href="/exchange">Exchange</a>
+  </div>
+</div>
+
+<script>
+  let pathname = window.location.pathname
+
+  if (pathname.indexOf('dashboard') > -1) {
+    window.$('#item1').addClass('active')
+  } else if (pathname.indexOf('invest') > -1) {
+    window.$('#item2').addClass('active')
+  } else {
+    window.$('#item3').addClass('active')
+  }
+</script>

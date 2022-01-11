@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${partials}/head`); -%>
+
+  <body class="dash-body">
+    <div class="container max-w-app">
+      <%- include(`${layouts}/header`); -%>
+      <div class="body">
+        <div class="d-flex text-center flex-column">
+          <h1 class="label">$0</h1>
+          <p class="sub-label">net worth</p>
+        </div>
+
+        <div class="mt-2"></div>
+
+        <div class="board">
+          <%- include(`${layouts}/menu`); -%>
+
+          <div class="mt-3"></div>
+
+          <div class="tab-body">
+            <div class="token-box">
+              <div class="d-flex justify-content-between label">
+                <span>
+                  From
+                </span>
+                <span>
+                  Balance: --
+                </span>
+              </div>
+
+              <div class="mt-3"></div>
+
+              <div class="d-flex justify-content-between body">
+                <input placeholder="0" type="number" />
+                <div class="d-flex ">
+                  <button class="max">
+                    MAX
+                  </button>
+                  <button class="token">
+                    <img src="<%= PP %>/BNB.png" alt="token name" />
+                    <span>BNB</span>
+                    <img src="<%= PP %>/caret-down.svg" alt="arrow down" style="width: max-content; height: auto;" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center my-3">
+              <img src="<%= PP %>/arrow-down.svg" alt="arrow down" />
+            </div>
+
+            <div class="token-box">
+              <div class="d-flex justify-content-between label">
+                <span>
+                  To
+                </span>
+                <span>
+                  Balance: --
+                </span>
+              </div>
+
+              <div class="mt-3"></div>
+
+              <div class="d-flex justify-content-between body">
+                <input placeholder="0" type="number" />
+                <div class="d-flex ">
+                  <button class="token">
+                    <img src="<%= PP %>/pacoca-token-logo.png" alt="token name" />
+                    <span>PACOCA</span>
+                    <img src="<%= PP %>/caret-down.svg" alt="arrow down" style="width: max-content; height: auto;" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3"></div>
+
+          <div class="con-wallet">
+            Connect your wallet
+          </div>
+
+          <div class="mt-3"></div>
+
+          <div class="powered-by">
+            Powered by
+            <img src="<%= PP %>/1inch.svg" alt="1inch" class="ml-2" style="width: 96px;" />
+          </div>
+        </div>
+      </div>
+
+      <%- include(`${layouts}/footer`); -%>
+    </div>
+    <%- include(`${partials}/scripts`, {scriptname: 'dashboard'}); -%>
+  </body>
+</html>

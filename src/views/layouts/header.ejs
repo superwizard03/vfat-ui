@@ -1,0 +1,213 @@
+<div class="header mb-24">
+  <div class="d-flex justify-content-between align-items-center mb-32">
+    <a href="#">
+      <img src="<%= PP %>/pacoca.svg" alt="pacoca" />
+    </a>
+    <div class="d-flex">
+      <div
+        class="d-flex left-icon-btn ps-4 pe-2 mr-2 align-items-center"
+        data-bs-toggle="modal"
+        data-bs-target="#viewWalletModal"
+      >
+        <img src="<%= PP %>/bsc.svg" alt="bsc" />
+        <span>Connect Wallet</span>
+      </div>
+      &nbsp;&nbsp;
+      <a href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">
+        <img src="<%= PP %>/config.svg" alt="config" />
+      </a>
+    </div>
+  </div>
+  <div class="d-flex text-center flex-column align-items-center">
+    <h1 class="label vmb-4 position-relative">
+      $0
+      <div id="detail-icon" class="detail-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="absolute-center">
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 1 0 8 0zm0 12h0a.8.8 0 0 1-.8-.8V8a.8.8 0 0 1 .8-.8h0a.8.8 0 0 1 .8.8v3.2a.8.8 0 0 1-.8.8zm.4-6.4h-.8a.4.4 0 0 1-.4-.4v-.8a.4.4 0 0 1 .4-.4h.8a.4.4 0 0 1 .4.4v.8a.4.4 0 0 1-.4.4z"
+            fill="#341f10"
+          ></path>
+        </svg>
+        <div
+          id="detail-tip"
+          class="tip position-absolute left-1/2 z-30"
+          style="top: 20px; transform: translateX(-50%); display: none;"
+        ></div>
+        <div
+          id="detail-panel"
+          class="detail-panel position-absolute p-24 z-20 shadow-button rounded-10"
+          style="display: none;"
+        >
+          <div class="d-flex justify-content-between text-14">
+            <span class="font-normal">Deposits</span>
+            <span class="font-normal">$0</span>
+          </div>
+          <div class="mt-3"></div>
+          <div class="d-flex justify-content-between text-14">
+            <span class="font-normal">Wallet</span>
+            <span class="font-normal">$0</span>
+          </div>
+          <hr class="text-dark-15" />
+          <div class="d-flex justify-content-between text-14">
+            <span>Net worth</span>
+            <span>$0</span>
+          </div>
+        </div>
+      </div>
+    </h1>
+    <p class="sub-label">net worth</p>
+  </div>
+</div>
+
+<div class="modal fade" id="viewWalletModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content px-24 py-32 text-14 rounded-10">
+      <div class="modal-header p-0 mb-32">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Wallet address</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex px-0 py-3 flex-column text-14 text-center font-700">
+        <div class="mb-16">
+          <span>Copy address</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="ml-8">
+            <path
+              d="M1.6 0A1.6 1.6 0 0 0 0 1.6V12a.8.8 0 1 0 1.6 0V1.6H12A.8.8 0 1 0 12 0H1.6zm3.2 3.2a1.6 1.6 0 0 0-1.6 1.6v9.6A1.6 1.6 0 0 0 4.8 16h9.6a1.6 1.6 0 0 0 1.6-1.6V4.8a1.6 1.6 0 0 0-1.6-1.6H4.8zm0 1.6h9.6v9.6H4.8V4.8z"
+            ></path>
+          </svg>
+        </div>
+        <div class="mb-16">
+          <span>View on BscScan</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14">
+            <path
+              d="M12.257 1a.72.72 0 0 0-.08.007H8.662a.72.72 0 0 0-.634 1.086.72.72 0 0 0 .634.358h1.867L3.821 9.159a.72.72 0 0 0 .318 1.219.72.72 0 0 0 .703-.199l6.708-6.708v1.867a.72.72 0 0 0 1.086.634.72.72 0 0 0 .358-.634V1.821a.72.72 0 0 0-.736-.82zm-10.814.007C.655 1.007 0 1.662 0 2.451v10.105C0 13.345.655 14 1.444 14h10.106c.789 0 1.444-.655 1.444-1.444V8.225a.72.72 0 0 0-1.086-.634.72.72 0 0 0-.358.634v4.331H1.444V2.451h4.331a.72.72 0 0 0 .634-1.086.72.72 0 0 0-.634-.358H1.444z"
+              fill="#341f10"
+            />
+            <defs />
+          </svg>
+        </div>
+      </div>
+      <div class="modal-footer p-0 d-block">
+        <button class="logout text-center rounded-10 w-100 py-20 text-16">
+          Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content px-24 py-32 text-14 rounded-10">
+      <div class="modal-header p-0">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Settings</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="form-check form-switch px-0 py-3">
+          <label class="form-check-label" for="flexSwitchCheckChecked">Hide balances smaller than $1</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" />
+        </div>
+      </div>
+      <div class="modal-body d-flex justify-content-between px-0 py-3 align-items-center">
+        <span>
+          Base currency
+        </span>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn dropdown-toggle select-currency"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="<%= PP %>/flags/united-states.svg" alt="flag" />
+            USD
+          </button>
+          <div class="dropdown-menu dropdown-menu-end">
+            <div class=" d-flex flex-wrap justify-content-center">
+              <button type="button" class="btn select-currency">
+                <img src="<%= PP %>/flags/united-states.svg" alt="flag" />
+                USD
+              </button>
+              <button type="button" class="btn select-currency">
+                <img src="<%= PP %>/flags/united-states.svg" alt="flag" />
+                USD
+              </button>
+              <button type="button" class="btn select-currency">
+                <img src="<%= PP %>/flags/united-states.svg" alt="flag" />
+                USD
+              </button>
+              <button type="button" class="btn select-currency">
+                <img src="<%= PP %>/flags/united-states.svg" alt="flag" />
+                USD
+              </button>
+              <button type="button" class="btn select-currency">
+                <img src="<%= PP %>/flags/united-states.svg" alt="flag" />
+                USD
+              </button>
+              <button type="button" class="btn select-currency">
+                <img src="<%= PP %>/flags/united-states.svg" alt="flag" />
+                USD
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer p-0 d-block">
+        <p class="text-left my-3">
+          Exchange slippage tolerance
+        </p>
+        <div class="row">
+          <div class="col-4 p-0">
+            <button id="slippage-half" class="btn-default">
+              0.5%
+            </button>
+          </div>
+          <div class="col-4 p-0 text-center">
+            <button id="slippage-one" class="btn-default active">
+              1%
+            </button>
+          </div>
+          <div class="col-4 p-0 text-end">
+            <input id="slippage-custom" type="number" class="btn-default text-center" placeholder="Custom" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('#detail-icon').hover(
+    function() {
+      $('#detail-tip').css('display', 'block')
+      $('#detail-panel').css('display', 'block')
+    },
+    function() {
+      $('#detail-tip').css('display', 'none')
+      $('#detail-panel').css('display', 'none')
+    }
+  )
+
+  $('#slippage-custom').click(function() {
+    $(this).val(1)
+    $(this).addClass('active')
+  })
+
+  $('#slippage-custom').on('change paste keyup', function() {
+    let val = $(this).val()
+    if (parseInt(val) > 1) {
+      $(this).addClass('active')
+      $('#slippage-half').removeClass('active')
+      $('#slippage-one').removeClass('active')
+    } else {
+      $(this).removeClass('active')
+      $('#slippage-one').addClass('active')
+    }
+  })
+
+  $('#slippage-custom').blur(function() {
+    let val = $(this).val()
+
+    if (parseInt(val) <= 1) {
+      $(this).val('')
+    }
+  })
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${partials}/head`); -%>
+
+  <body class="dash-body">
+    <div class="container max-w-app min-h-screen">
+      <%- include(`${layouts}/header`); -%>
+      <div class="body">
+
+        <div class="board">
+          <%- include(`${layouts}/menu`); -%>
+          
+        </div>
+      </div>
+      
+
+      <%- include(`${layouts}/footer`); -%>
+    </div>
+    <%- include(`${partials}/scripts`, {scriptname: 'dashboard'}); -%>
+  </body>
+</html>

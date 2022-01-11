@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${partials}/head`); -%>
+
+  <body>
+    <%- include(`${partials}/header_main`); -%>
+    <div class="container body">
+      <div class="board d-flex flex-column text-center">
+        <span class="text-16 mb-16">
+          *************** 👨‍🌾 UNOFFICIAL BAO.FINANCE FARMING CALCULATOR 👨‍🌾 ***************
+        </span>
+        <span class="text-14 mb-16">
+          INFO : https://www.bao.finance
+        </span>
+
+        <div id="log"></div>
+      </div>
+    </div>
+    <div class="loader--1"></div>
+    <%- include(`${partials}/scripts`, {scriptname: 'bao'}); -%>
+  </body>
+</html>

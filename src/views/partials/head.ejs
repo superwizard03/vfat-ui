@@ -1,0 +1,66 @@
+<head>
+  <meta charset="UTF-8" />
+  <!-- Primary Meta Tags -->
+  <title>Yield Farming Info</title>
+  <meta name="title" content="Yield Farming Info" />
+  <meta name="description" content="&#x1F9D1;&#x200D;&#x1F33E; It ain't much, but it's honest work" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vfat.tools/" />
+  <meta property="og:title" content="Yield Farming Info" />
+  <meta property="og:description" content="&#x1F9D1;&#x200D;&#x1F33E; It ain't much, but it's honest work" />
+  <meta property="og:image" content="https://yieldfarming.info/img/thumbnail.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://vfat.tools/" />
+  <meta property="twitter:title" content="Yield Farming Info" />
+  <meta property="twitter:description" content="&#x1F9D1;&#x200D;&#x1F33E; It ain't much, but it's honest work" />
+  <meta property="twitter:image" content="https://yieldfarming.info/img/thumbnail.png" />
+
+  <% if(filenameMap) { %>
+  <link rel="stylesheet" href="<%= PP %>/css/<%= filenameMap['index.css'] %>" />
+  <link rel="preload" href="<%= PP %>/js/<%= filenameMap['vendor.js'] %>" as="script" />
+  <link rel="prefetch" href="<%= PP %>/js/<%= filenameMap['vendor.js'] %>" />
+  <link rel="preload" href="<%= PP %>/js/<%= filenameMap['app.js'] %>" as="script" />
+  <link rel="prefetch" href="<%= PP %>/js/<%= filenameMap['app.js'] %>" />
+  <% } else { %>
+  <link rel="stylesheet" href="<%= PP %>/css/index.css" />
+  <link rel="preload" href="<%= PP %>/js/vendor.js" as="script" />
+  <link rel="prefetch" href="<%= PP %>/js/vendor.js" />
+  <link rel="preload" href="<%= PP %>/js/app.js" as="script" />
+  <link rel="prefetch" href="<%= PP %>/js/app.js" />
+  <% } %>
+
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="<%= PP %>/favicon.svg" />
+  <link rel="apple-touch-icon" href="<%= PP %>/apple-touch-icon.png" />
+  <link rel="manifest" href="<%= PP %>/manifest.json" />
+
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"
+  ></script>
+
+  <link href="http://fonts.cdnfonts.com/css/mark-pro" rel="stylesheet" />
+</head>
+<%- include(`${partials}/quick`); -%> <%- include(`${partials}/pool_details_modal`); -%>

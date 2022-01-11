@@ -1,0 +1,287 @@
+@import 'variables';
+
+* {
+  transition: all .2s ease-in-out;
+  font-family: 'Mark Pro', sans-serif, Arial;
+}
+body {
+  background-color: $primary !important;
+
+}
+
+.container {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+.dash-body {
+  background-color: $primary;
+}
+
+.header {
+  padding-top: 24px;
+
+
+  .label {
+    border: unset;
+    font-size: 28px;
+    font-weight: 900;
+    color: $text_dark;
+    width: min-content;
+
+    .detail-icon {
+      position: absolute;
+      right: -4px;
+      transform: translate(100%, -50%);
+      top: 50%;
+      cursor: pointer;
+
+      .detail-panel {
+        width: 250px;
+        transform: translateX(-50%);
+        top: 26px;
+        background-color: #fffcfa;
+      }
+    }
+  }
+
+  .sub-label {
+    font-size: 14px;
+    color: $text_dark;
+  }
+}
+
+.footer {
+  margin-top: auto;
+
+  .footer-link {
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: unset;
+    color: $text_dark;
+
+    &:hover {
+      text-decoration: underline;
+      color: $text_dark;
+    }
+  }
+
+  .left-region-btn {
+    background-color: $bg_secondary;
+
+    & > .region {
+      background-color: $bg_primary;
+      height: 20px;
+    }
+  }
+}
+
+.body {
+  .board {
+    box-shadow: 0 0 24px 0 #d58c613d;
+    background-color: $bg_light;
+    border-radius: 12px;
+    padding: 24px;
+
+    .token-box {
+      padding: 24px;
+      border-radius: 10px;
+      border: 2px solid $primary;
+      background: #fffcfa;
+
+      .label > span {
+        font-size: 14px;
+        color: $text_dark;
+      }
+
+      .body {
+        input {
+          font-size: 20px;
+          font-weight: 700;
+          border: unset;
+          background: #fffcfa;
+
+          &:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+          }
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+
+        .max {
+          color: $text_dark;
+          background-color: $primary;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          border: unset;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: $text_dark;
+            color: $primary;
+          }
+        }
+
+        .token {
+          background: unset;
+          border: unset;
+          padding: '1px 5px';
+          & > img {
+            width: 24px;
+            height: 24px;
+          }
+
+          &:hover {
+            background-color: rgba(52, 31, 16, 0.05);
+          }
+        }
+      }
+    }
+
+    .con-wallet {
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      font-weight: 700;
+      padding: 20px;
+      cursor: pointer;
+      background-color: $text_dark;
+      color: $primary;
+      border-radius: 10px;
+      text-align: center;
+
+      &:hover {
+        box-shadow: 0 8px 16px 0 #341f103d;
+      }
+    }
+
+    .powered-by {
+      padding: 16px;
+      text-align: center;
+      font-size: 14px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-radius: 10px;
+      background-color: rgba(52, 31, 16, 0.05);
+      color: $text_dark;
+    }
+  }
+}
+
+// modal stylesheet
+#settingsModal {
+  .modal-content {
+    background-color: $bg_soapstone;
+    width: 350px;
+  }
+  .modal-header {
+    display: block;
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: $text_dark;
+    }
+    .btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .form-check-label {
+      pointer-events: none;
+    }
+    .form-check-input {
+      position: absolute;
+      right: 25px;
+      width: 50px !important;
+      height: 25px !important;
+      margin-top: -5px;
+    }
+  }
+
+  .modal-body {
+    .select-currency {
+      border: unset;
+      background-color: unset;
+      transition: all 0.2s ease-in-out;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(52, 31, 16, 0.15);
+      }
+
+      &:focus {
+        box-shadow: unset;
+      }
+
+      img {
+        width: 16px;
+      }
+    }
+    .dropdown-menu {
+      border-color: rgba(52, 31, 16, 0.1);
+      background-color: $bg_soapstone;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      width: 300px;
+    }
+  }
+  .modal-footer {
+    .btn-default {
+      width: 90px;
+    }
+
+    #slippage-custom {
+      background: none;
+      border: 1px solid $primary;
+      outline: none;
+
+      &:focus {
+        background-color: $text_dark;
+        color: $primary;
+      }
+    }
+  }
+}
+
+#viewWalletModal {
+  .modal-content {
+    background-color: $bg_soapstone;
+  }
+  .modal-header {
+    display: block;
+    border: unset;
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: $text_dark;
+    }
+    .btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .modal-footer {
+    border: unset;
+
+    .logout {
+      background-color: $text_dark;
+      color: $primary;
+    }
+  }
+}
+
+td {
+  text-align: center !important;
+}
